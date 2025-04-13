@@ -1,1 +1,0 @@
-{"errorType":"Runtime.InvalidEntrypoint","errorMessage":"RequestId: 13691334-5517-4f92-9132-de356b8950e9 Error: Couldn't find valid bootstrap(s): [/var/task/bootstrap /opt/bootstrap]"}
