@@ -1,0 +1,73 @@
+{
+    "Traces": [
+        {
+            "Id": "1-67fb95eb-59742da66a9fdbd437453323",
+            "Duration": 193.598,
+            "LimitExceeded": false,
+            "Segments": [
+                {
+                    "Id": "39bec89a3cb7489f",
+                    "Document": "{\"id\":\"39bec89a3cb7489f\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.744541163782E9,\"trace_id\":\"1-67fb95eb-59742da66a9fdbd437453323\",\"end_time\":1.744541163791E9,\"http\":{\"response\":{\"status\":202}},\"aws\":{\"request_id\":\"4788947d-8355-4997-b16c-0922b377e19a\"},\"origin\":\"AWS::Lambda\",\"resource_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-PythonFunction-Wrz5rHLeVjDV\",\"subsegments\":[{\"id\":\"227abb346bc4967a\",\"name\":\"Dwell Time\",\"start_time\":1.744541163782E9,\"end_time\":1.744541163894E9},{\"id\":\"54dd18991cebed5c\",\"name\":\"Attempt #3\",\"start_time\":1.744541357361E9,\"end_time\":1.744541357378E9,\"error\":true,\"http\":{\"response\":{\"status\":200}}},{\"id\":\"6b4ddf23b6f6292f\",\"name\":\"Attempt #2\",\"start_time\":1.744541232194E9,\"end_time\":1.744541232224E9,\"error\":true,\"http\":{\"response\":{\"status\":200}}},{\"id\":\"50888819fdf3ee9a\",\"name\":\"Attempt #1\",\"start_time\":1.744541163894E9,\"end_time\":1.744541164984E9,\"error\":true,\"http\":{\"response\":{\"status\":200}}}]}"
+                },
+                {
+                    "Id": "b180a39da650144c",
+                    "Document": "{\"id\":\"b180a39da650144c\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.744541232219853E9,\"trace_id\":\"1-67fb95eb-59742da66a9fdbd437453323\",\"end_time\":1.744541232221745E9,\"parent_id\":\"6b4ddf23b6f6292f\",\"error\":true,\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-PythonFunction-Wrz5rHLeVjDV\"}]},\"annotations\":{},\"origin\":\"AWS::Lambda::Function\",\"cause\":{\"working_directory\":\"/var/task\",\"paths\":[\"/var/task/mangum/adapter.py\"],\"exceptions\":[{\"message\":\"The adapter was unable to infer a handler to use for the event. This is likely related to how the Lambda function was invoked. (Are you testing locally? Make sure the request payload is valid for a supported handler.)\",\"type\":\"RuntimeError\",\"stack\":[{\"path\":\"/var/task/mangum/adapter.py\",\"line\":76,\"label\":\"__call__\"},{\"path\":\"/var/task/mangum/adapter.py\",\"line\":68,\"label\":\"infer\"}]}]}}"
+                },
+                {
+                    "Id": "c99b8f21d1263213",
+                    "Document": "{\"id\":\"c99b8f21d1263213\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.744541164977715E9,\"trace_id\":\"1-67fb95eb-59742da66a9fdbd437453323\",\"end_time\":1.744541164982501E9,\"parent_id\":\"50888819fdf3ee9a\",\"error\":true,\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-PythonFunction-Wrz5rHLeVjDV\"}]},\"annotations\":{},\"origin\":\"AWS::Lambda::Function\",\"cause\":{\"working_directory\":\"/var/task\",\"paths\":[\"/var/task/mangum/adapter.py\"],\"exceptions\":[{\"message\":\"The adapter was unable to infer a handler to use for the event. This is likely related to how the Lambda function was invoked. (Are you testing locally? Make sure the request payload is valid for a supported handler.)\",\"type\":\"RuntimeError\",\"stack\":[{\"path\":\"/var/task/mangum/adapter.py\",\"line\":76,\"label\":\"__call__\"},{\"path\":\"/var/task/mangum/adapter.py\",\"line\":68,\"label\":\"infer\"}]}]},\"subsegments\":[{\"id\":\"d56e2ce1e382283e\",\"name\":\"Init\",\"start_time\":1.744541164098331E9,\"end_time\":1.744541164973622E9}]}"
+                },
+                {
+                    "Id": "06c9bbf369f6c4b6",
+                    "Document": "{\"id\":\"06c9bbf369f6c4b6\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.7445413573779411E9,\"trace_id\":\"1-67fb95eb-59742da66a9fdbd437453323\",\"end_time\":1.744541357380485E9,\"parent_id\":\"54dd18991cebed5c\",\"error\":true,\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-PythonFunction-Wrz5rHLeVjDV\"}]},\"annotations\":{},\"origin\":\"AWS::Lambda::Function\",\"cause\":{\"working_directory\":\"/var/task\",\"paths\":[\"/var/task/mangum/adapter.py\"],\"exceptions\":[{\"message\":\"The adapter was unable to infer a handler to use for the event. This is likely related to how the Lambda function was invoked. (Are you testing locally? Make sure the request payload is valid for a supported handler.)\",\"type\":\"RuntimeError\",\"stack\":[{\"path\":\"/var/task/mangum/adapter.py\",\"line\":76,\"label\":\"__call__\"},{\"path\":\"/var/task/mangum/adapter.py\",\"line\":68,\"label\":\"infer\"}]}]}}"
+                }
+            ]
+        },
+        {
+            "Id": "1-67fb95cc-1bbd52ed42ee4f063350be7c",
+            "Duration": 0.678,
+            "LimitExceeded": false,
+            "Segments": [
+                {
+                    "Id": "80cad26d783f04b4",
+                    "Document": "{\"id\":\"80cad26d783f04b4\",\"name\":\"test-NodejsFunction-0NVcp9yklNs0\",\"start_time\":1.744541132910239E9,\"trace_id\":\"1-67fb95cc-1bbd52ed42ee4f063350be7c\",\"end_time\":1.744541132998592E9,\"parent_id\":\"76989d03e671a591\",\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-NodejsFunction-0NVcp9yklNs0\"}]},\"annotations\":{\"aws:responseLatency\":70.5,\"aws:runtimeOverhead\":17.257,\"aws:responseDuration\":0.086},\"origin\":\"AWS::Lambda::Function\",\"subsegments\":[{\"id\":\"c10e40896ac47d09\",\"name\":\"Init\",\"start_time\":1.744541132608334E9,\"end_time\":1.744541132905795E9},{\"id\":\"ec3e7e72374c4e98\",\"name\":\"Overhead\",\"start_time\":1.74454113298E9,\"end_time\":1.744541132997257E9}]}"
+                },
+                {
+                    "Id": "7c55acdc9d162b2f",
+                    "Document": "{\"id\":\"7c55acdc9d162b2f\",\"name\":\"test-NodejsFunction-0NVcp9yklNs0\",\"start_time\":1.744541132321E9,\"trace_id\":\"1-67fb95cc-1bbd52ed42ee4f063350be7c\",\"end_time\":1.744541132328E9,\"http\":{\"response\":{\"status\":202}},\"aws\":{\"request_id\":\"328a52b9-79ad-4f14-9776-cd074e7f45cc\"},\"origin\":\"AWS::Lambda\",\"resource_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-NodejsFunction-0NVcp9yklNs0\",\"subsegments\":[{\"id\":\"7d20b16f81489026\",\"name\":\"Dwell Time\",\"start_time\":1.744541132322E9,\"end_time\":1.744541132437E9},{\"id\":\"76989d03e671a591\",\"name\":\"Attempt #1\",\"start_time\":1.744541132437E9,\"end_time\":1.744541132982E9,\"http\":{\"response\":{\"status\":200}}}]}"
+                }
+            ]
+        },
+        {
+            "Id": "1-67fb996b-2d56460d1c88d3281a29fad7",
+            "Duration": 0.33,
+            "LimitExceeded": false,
+            "Segments": [
+                {
+                    "Id": "1ad88cdf01b9e1f8",
+                    "Document": "{\"id\":\"1ad88cdf01b9e1f8\",\"name\":\"test-GoFunction-pX6OFxV2ipUP\",\"start_time\":1.7445420596198764E9,\"trace_id\":\"1-67fb996b-2d56460d1c88d3281a29fad7\",\"end_time\":1.7445420596218066E9,\"parent_id\":\"74b91a816d3fd5d9\",\"aws\":{\"account_id\":\"585008049375\",\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\",\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-GoFunction-pX6OFxV2ipUP\"}],\"resource_names\":[\"test-GoFunction-pX6OFxV2ipUP\"]},\"origin\":\"AWS::Lambda::Function\",\"subsegments\":[{\"id\":\"91e723e0a9a9b1f3\",\"name\":\"Initialization\",\"start_time\":1.744542059560365E9,\"end_time\":1.7445420596183574E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}},{\"id\":\"4c7ad32dafbe78f7\",\"name\":\"Overhead\",\"start_time\":1.7445420596213832E9,\"end_time\":1.7445420596216488E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}},{\"id\":\"cb4f9f074f4ef1c1\",\"name\":\"Invocation\",\"start_time\":1.7445420596202784E9,\"end_time\":1.7445420596213202E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}}]}"
+                },
+                {
+                    "Id": "34508d82da44c493",
+                    "Document": "{\"id\":\"34508d82da44c493\",\"name\":\"test-GoFunction-pX6OFxV2ipUP\",\"start_time\":1.744542059293E9,\"trace_id\":\"1-67fb996b-2d56460d1c88d3281a29fad7\",\"end_time\":1.744542059302E9,\"http\":{\"response\":{\"status\":202}},\"aws\":{\"request_id\":\"1b31fc9d-11a2-4bac-9bcf-ec2d066d9634\"},\"origin\":\"AWS::Lambda\",\"resource_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\",\"subsegments\":[{\"id\":\"2801c66154ca2c67\",\"name\":\"Dwell Time\",\"start_time\":1.744542059293E9,\"end_time\":1.744542059361E9},{\"id\":\"74b91a816d3fd5d9\",\"name\":\"Attempt #1\",\"start_time\":1.744542059361E9,\"end_time\":1.744542059623E9,\"http\":{\"response\":{\"status\":200}}}]}"
+                }
+            ]
+        },
+        {
+            "Id": "1-67fb95e7-49e24efd1d4d925749a7f208",
+            "Duration": 0.4,
+            "LimitExceeded": false,
+            "Segments": [
+                {
+                    "Id": "57d0fe13090a6d36",
+                    "Document": "{\"id\":\"57d0fe13090a6d36\",\"name\":\"test-GoFunction-pX6OFxV2ipUP\",\"start_time\":1.744541159392E9,\"trace_id\":\"1-67fb95e7-49e24efd1d4d925749a7f208\",\"end_time\":1.7445411594E9,\"http\":{\"response\":{\"status\":202}},\"aws\":{\"request_id\":\"6ab0a856-1853-4e92-90cc-7805efc234d1\"},\"origin\":\"AWS::Lambda\",\"resource_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\",\"subsegments\":[{\"id\":\"5fc726de914036ac\",\"name\":\"Attempt #1\",\"start_time\":1.744541159502E9,\"end_time\":1.744541159792E9,\"http\":{\"response\":{\"status\":200}}},{\"id\":\"50bf2cb3f506dc2e\",\"name\":\"Dwell Time\",\"start_time\":1.744541159393E9,\"end_time\":1.744541159502E9}]}"
+                },
+                {
+                    "Id": "6b7f2196473d047d",
+                    "Document": "{\"id\":\"6b7f2196473d047d\",\"name\":\"test-GoFunction-pX6OFxV2ipUP\",\"start_time\":1.7445411597901342E9,\"trace_id\":\"1-67fb95e7-49e24efd1d4d925749a7f208\",\"end_time\":1.7445411597918298E9,\"parent_id\":\"5fc726de914036ac\",\"aws\":{\"account_id\":\"585008049375\",\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\",\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-GoFunction-pX6OFxV2ipUP\"}],\"resource_names\":[\"test-GoFunction-pX6OFxV2ipUP\"]},\"origin\":\"AWS::Lambda::Function\",\"subsegments\":[{\"id\":\"61f3b23b6ccb9691\",\"name\":\"Initialization\",\"start_time\":1.7445411597323756E9,\"end_time\":1.744541159788589E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}},{\"id\":\"9e901a20d0861d57\",\"name\":\"Overhead\",\"start_time\":1.744541159791441E9,\"end_time\":1.744541159791656E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}},{\"id\":\"5e0bf65c75008cf1\",\"name\":\"Invocation\",\"start_time\":1.7445411597905452E9,\"end_time\":1.7445411597914155E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}}]}"
+                }
+            ]
+        }
+    ],
+    "UnprocessedTraceIds": []
+}

@@ -1,0 +1,58 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Code start comparison
+Resources:
+  PythonFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: PythonFunction
+      Handler: app.handler
+      Runtime: python3.12
+      Tracing: Active
+      Policies:
+      - AWSXRayDaemonWriteAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /python
+            Method: get
+    Metadata:
+      SamResourceId: PythonFunction
+  NodejsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: NodejsFunction
+      Handler: app.handler
+      Runtime: nodejs20.x
+      Tracing: Active
+      Policies:
+      - AWSXRayDaemonWriteAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /node
+            Method: get
+    Metadata:
+      SamResourceId: NodejsFunction
+  GoFunction:
+    Type: AWS::Serverless::Function
+    Metadata:
+      BuildMethod: makefile
+      SamResourceId: GoFunction
+    Properties:
+      CodeUri: GoFunction
+      Handler: bootstrap
+      Runtime: provided.al2023
+      Architectures:
+      - arm64
+      Tracing: Active
+      Policies:
+      - AWSXRayDaemonWriteAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /go
+            Method: get

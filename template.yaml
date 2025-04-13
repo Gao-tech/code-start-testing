@@ -1,0 +1,68 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Code start comparison
+
+Resources:
+  PythonFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: python/
+      Handler: app.handler
+      Runtime: python3.12
+      Tracing: Active
+      Policies:
+        - AWSXRayDaemonWriteAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /python
+            Method: get
+        # Schedule:
+        #   Type: Schedule
+        #   Properties:
+        #     Schedule: rate(15 minutes)
+
+  NodejsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: nodejs/
+      Handler: app.handler
+      Runtime: nodejs20.x
+      Tracing: Active
+      Policies:
+        - AWSXRayDaemonWriteAccess # for X-Ray policy
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /node
+            Method: get
+        # Schedule:
+        #   Type: Schedule
+        #   Properties:
+        #     Schedule: rate(15 minutes)
+
+  GoFunction:
+    Type: AWS::Serverless::Function
+    Metadata:
+      BuildMethod: makefile
+    Properties:
+      CodeUri: go/
+      Handler: bootstrap
+      Runtime: provided.al2023
+      Architectures:
+        - arm64 # Must match GOARCH in Makefile
+      Tracing: Active
+      Policies:
+        - AWSXRayDaemonWriteAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /go
+            Method: get
+        # Schedule:
+        #   Type: Schedule
+        #   Properties:
+        #     Schedule: rate(15 minutes)

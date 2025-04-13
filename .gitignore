@@ -1,0 +1,17 @@
+# Virtual environments
+analysis/venv/
+
+# Analysis outputs
+*.csv
+plots/
+
+# Editors
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]

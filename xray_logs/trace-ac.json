@@ -1,0 +1,96 @@
+{
+    "Traces": [
+        {
+            "Id": "1-67fba077-5b849fad4764acd06038fb33",
+            "Duration": 173.514,
+            "LimitExceeded": false,
+            "Segments": [
+                {
+                    "Id": "9f9943554c1656f0",
+                    "Document": "{\"id\":\"9f9943554c1656f0\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.7445440374581199E9,\"trace_id\":\"1-67fba077-5b849fad4764acd06038fb33\",\"end_time\":1.744544037460187E9,\"parent_id\":\"6e3f31a8468f11f4\",\"error\":true,\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-PythonFunction-Wrz5rHLeVjDV\"}]},\"annotations\":{},\"origin\":\"AWS::Lambda::Function\",\"cause\":{\"working_directory\":\"/var/task\",\"paths\":[\"/var/task/mangum/adapter.py\"],\"exceptions\":[{\"message\":\"The adapter was unable to infer a handler to use for the event. This is likely related to how the Lambda function was invoked. (Are you testing locally? Make sure the request payload is valid for a supported handler.)\",\"type\":\"RuntimeError\",\"stack\":[{\"path\":\"/var/task/mangum/adapter.py\",\"line\":76,\"label\":\"__call__\"},{\"path\":\"/var/task/mangum/adapter.py\",\"line\":68,\"label\":\"infer\"}]}]}}"
+                },
+                {
+                    "Id": "12fde01b0b3495d6",
+                    "Document": "{\"id\":\"12fde01b0b3495d6\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.7445439202988648E9,\"trace_id\":\"1-67fba077-5b849fad4764acd06038fb33\",\"end_time\":1.744543920300948E9,\"parent_id\":\"271194d2ba61a30b\",\"error\":true,\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-PythonFunction-Wrz5rHLeVjDV\"}]},\"annotations\":{},\"origin\":\"AWS::Lambda::Function\",\"cause\":{\"working_directory\":\"/var/task\",\"paths\":[\"/var/task/mangum/adapter.py\"],\"exceptions\":[{\"message\":\"The adapter was unable to infer a handler to use for the event. This is likely related to how the Lambda function was invoked. (Are you testing locally? Make sure the request payload is valid for a supported handler.)\",\"type\":\"RuntimeError\",\"stack\":[{\"path\":\"/var/task/mangum/adapter.py\",\"line\":76,\"label\":\"__call__\"},{\"path\":\"/var/task/mangum/adapter.py\",\"line\":68,\"label\":\"infer\"}]}]}}"
+                },
+                {
+                    "Id": "40b40047863c8fe1",
+                    "Document": "{\"id\":\"40b40047863c8fe1\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.744543863946E9,\"trace_id\":\"1-67fba077-5b849fad4764acd06038fb33\",\"end_time\":1.744543863954E9,\"http\":{\"response\":{\"status\":202}},\"aws\":{\"request_id\":\"f38909af-7f4b-4597-950a-d5f04f51d584\"},\"origin\":\"AWS::Lambda\",\"resource_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-PythonFunction-Wrz5rHLeVjDV\",\"subsegments\":[{\"id\":\"79113a7c0caceb46\",\"name\":\"Dwell Time\",\"start_time\":1.744543863946E9,\"end_time\":1.744543864015E9},{\"id\":\"5c1141773a1dd0ec\",\"name\":\"Attempt #1\",\"start_time\":1.744543864015E9,\"end_time\":1.744543865139E9,\"error\":true,\"http\":{\"response\":{\"status\":200}}},{\"id\":\"6e3f31a8468f11f4\",\"name\":\"Attempt #3\",\"start_time\":1.744544037437E9,\"end_time\":1.744544037451E9,\"error\":true,\"http\":{\"response\":{\"status\":200}}},{\"id\":\"271194d2ba61a30b\",\"name\":\"Attempt #2\",\"start_time\":1.744543920274E9,\"end_time\":1.744543920303E9,\"error\":true,\"http\":{\"response\":{\"status\":200}}}]}"
+                },
+                {
+                    "Id": "92b9e2fa0b3d236b",
+                    "Document": "{\"id\":\"92b9e2fa0b3d236b\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.7445438651304011E9,\"trace_id\":\"1-67fba077-5b849fad4764acd06038fb33\",\"end_time\":1.744543865141587E9,\"parent_id\":\"5c1141773a1dd0ec\",\"error\":true,\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-PythonFunction-Wrz5rHLeVjDV\"}]},\"annotations\":{},\"origin\":\"AWS::Lambda::Function\",\"cause\":{\"working_directory\":\"/var/task\",\"paths\":[\"/var/task/mangum/adapter.py\"],\"exceptions\":[{\"message\":\"The adapter was unable to infer a handler to use for the event. This is likely related to how the Lambda function was invoked. (Are you testing locally? Make sure the request payload is valid for a supported handler.)\",\"type\":\"RuntimeError\",\"stack\":[{\"path\":\"/var/task/mangum/adapter.py\",\"line\":76,\"label\":\"__call__\"},{\"path\":\"/var/task/mangum/adapter.py\",\"line\":68,\"label\":\"infer\"}]}]},\"subsegments\":[{\"id\":\"f5cd34d845a3facd\",\"name\":\"Init\",\"start_time\":1.744543864229951E9,\"end_time\":1.744543865126072E9}]}"
+                }
+            ]
+        },
+        {
+            "Id": "1-67fba073-7ec0002d36e3a1af231a7c89",
+            "Duration": 0.339,
+            "LimitExceeded": false,
+            "Segments": [
+                {
+                    "Id": "44dda8f00a3f1995",
+                    "Document": "{\"id\":\"44dda8f00a3f1995\",\"name\":\"test-GoFunction-pX6OFxV2ipUP\",\"start_time\":1.7445438597352448E9,\"trace_id\":\"1-67fba073-7ec0002d36e3a1af231a7c89\",\"end_time\":1.7445438597473059E9,\"parent_id\":\"36279c87efadff04\",\"aws\":{\"account_id\":\"585008049375\",\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\",\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-GoFunction-pX6OFxV2ipUP\"}],\"resource_names\":[\"test-GoFunction-pX6OFxV2ipUP\"]},\"origin\":\"AWS::Lambda::Function\",\"subsegments\":[{\"id\":\"0054f127e0c1f304\",\"name\":\"Initialization\",\"start_time\":1.7445438596760752E9,\"end_time\":1.744543859733736E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}},{\"id\":\"968fea086c1a1236\",\"name\":\"Overhead\",\"start_time\":1.7445438597367435E9,\"end_time\":1.7445438597370434E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}},{\"id\":\"8b3e348ec344b3b7\",\"name\":\"Invocation\",\"start_time\":1.7445438597357693E9,\"end_time\":1.744543859736724E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}}]}"
+                },
+                {
+                    "Id": "241669fda440642a",
+                    "Document": "{\"id\":\"241669fda440642a\",\"name\":\"test-GoFunction-pX6OFxV2ipUP\",\"start_time\":1.744543859408E9,\"trace_id\":\"1-67fba073-7ec0002d36e3a1af231a7c89\",\"end_time\":1.744543859415E9,\"http\":{\"response\":{\"status\":202}},\"aws\":{\"request_id\":\"cadd9fc2-ac04-4c2e-a90b-d24d7dd6807c\"},\"origin\":\"AWS::Lambda\",\"resource_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\",\"subsegments\":[{\"id\":\"1bfefc26575f5e7a\",\"name\":\"Dwell Time\",\"start_time\":1.744543859408E9,\"end_time\":1.744543859481E9},{\"id\":\"36279c87efadff04\",\"name\":\"Attempt #1\",\"start_time\":1.744543859481E9,\"end_time\":1.744543859738E9,\"http\":{\"response\":{\"status\":200}}}]}"
+                }
+            ]
+        },
+        {
+            "Id": "1-67fb9cf4-23b4905713f9ce9b3fb66e40",
+            "Duration": 195.525,
+            "LimitExceeded": false,
+            "Segments": [
+                {
+                    "Id": "1e521c27bc02c86d",
+                    "Document": "{\"id\":\"1e521c27bc02c86d\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.7445430264046109E9,\"trace_id\":\"1-67fb9cf4-23b4905713f9ce9b3fb66e40\",\"end_time\":1.744543026408243E9,\"parent_id\":\"4b5c54a8eaef2201\",\"error\":true,\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-PythonFunction-Wrz5rHLeVjDV\"}]},\"annotations\":{},\"origin\":\"AWS::Lambda::Function\",\"cause\":{\"working_directory\":\"/var/task\",\"paths\":[\"/var/task/mangum/adapter.py\"],\"exceptions\":[{\"message\":\"The adapter was unable to infer a handler to use for the event. This is likely related to how the Lambda function was invoked. (Are you testing locally? Make sure the request payload is valid for a supported handler.)\",\"type\":\"RuntimeError\",\"stack\":[{\"path\":\"/var/task/mangum/adapter.py\",\"line\":76,\"label\":\"__call__\"},{\"path\":\"/var/task/mangum/adapter.py\",\"line\":68,\"label\":\"infer\"}]}]}}"
+                },
+                {
+                    "Id": "0f6f5adc461d1cb3",
+                    "Document": "{\"id\":\"0f6f5adc461d1cb3\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.7445429652455559E9,\"trace_id\":\"1-67fb9cf4-23b4905713f9ce9b3fb66e40\",\"end_time\":1.744542965248848E9,\"parent_id\":\"5e18f4b0c21a73ff\",\"error\":true,\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-PythonFunction-Wrz5rHLeVjDV\"}]},\"annotations\":{},\"origin\":\"AWS::Lambda::Function\",\"cause\":{\"working_directory\":\"/var/task\",\"paths\":[\"/var/task/mangum/adapter.py\"],\"exceptions\":[{\"message\":\"The adapter was unable to infer a handler to use for the event. This is likely related to how the Lambda function was invoked. (Are you testing locally? Make sure the request payload is valid for a supported handler.)\",\"type\":\"RuntimeError\",\"stack\":[{\"path\":\"/var/task/mangum/adapter.py\",\"line\":76,\"label\":\"__call__\"},{\"path\":\"/var/task/mangum/adapter.py\",\"line\":68,\"label\":\"infer\"}]}]},\"subsegments\":[{\"id\":\"0dec445803686d42\",\"name\":\"Init\",\"start_time\":1.7445429643224218E9,\"end_time\":1.744542965241505E9}]}"
+                },
+                {
+                    "Id": "fdc410ea4bcb9159",
+                    "Document": "{\"id\":\"fdc410ea4bcb9159\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.744543159567878E9,\"trace_id\":\"1-67fb9cf4-23b4905713f9ce9b3fb66e40\",\"end_time\":1.744543159570338E9,\"parent_id\":\"4ce4998388500a61\",\"error\":true,\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-PythonFunction-Wrz5rHLeVjDV\"}]},\"annotations\":{},\"origin\":\"AWS::Lambda::Function\",\"cause\":{\"working_directory\":\"/var/task\",\"paths\":[\"/var/task/mangum/adapter.py\"],\"exceptions\":[{\"message\":\"The adapter was unable to infer a handler to use for the event. This is likely related to how the Lambda function was invoked. (Are you testing locally? Make sure the request payload is valid for a supported handler.)\",\"type\":\"RuntimeError\",\"stack\":[{\"path\":\"/var/task/mangum/adapter.py\",\"line\":76,\"label\":\"__call__\"},{\"path\":\"/var/task/mangum/adapter.py\",\"line\":68,\"label\":\"infer\"}]}]}}"
+                },
+                {
+                    "Id": "129bfffead91373b",
+                    "Document": "{\"id\":\"129bfffead91373b\",\"name\":\"test-PythonFunction-Wrz5rHLeVjDV\",\"start_time\":1.744542964048E9,\"trace_id\":\"1-67fb9cf4-23b4905713f9ce9b3fb66e40\",\"end_time\":1.744542964064E9,\"http\":{\"response\":{\"status\":202}},\"aws\":{\"request_id\":\"43f73178-2367-4ea8-9e4d-13bf64883786\"},\"origin\":\"AWS::Lambda\",\"resource_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-PythonFunction-Wrz5rHLeVjDV\",\"subsegments\":[{\"id\":\"4b5c54a8eaef2201\",\"name\":\"Attempt #2\",\"start_time\":1.744543026391E9,\"end_time\":1.74454302641E9,\"error\":true,\"http\":{\"response\":{\"status\":200}}},{\"id\":\"6159b2cc38a6c66a\",\"name\":\"Dwell Time\",\"start_time\":1.744542964048E9,\"end_time\":1.744542964129E9},{\"id\":\"5e18f4b0c21a73ff\",\"name\":\"Attempt #1\",\"start_time\":1.744542964129E9,\"end_time\":1.744542965254E9,\"error\":true,\"http\":{\"response\":{\"status\":200}}},{\"id\":\"4ce4998388500a61\",\"name\":\"Attempt #3\",\"start_time\":1.744543159546E9,\"end_time\":1.744543159573E9,\"error\":true,\"http\":{\"response\":{\"status\":200}}}]}"
+                }
+            ]
+        },
+        {
+            "Id": "1-67fba058-382556474a1e06091dc448de",
+            "Duration": 0.694,
+            "LimitExceeded": false,
+            "Segments": [
+                {
+                    "Id": "e46351db41944ce7",
+                    "Document": "{\"id\":\"e46351db41944ce7\",\"name\":\"test-NodejsFunction-0NVcp9yklNs0\",\"start_time\":1.744543832920403E9,\"trace_id\":\"1-67fba058-382556474a1e06091dc448de\",\"end_time\":1.744543833034837E9,\"parent_id\":\"6d6a27547b0b3602\",\"aws\":{\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-NodejsFunction-0NVcp9yklNs0\"}]},\"annotations\":{\"aws:responseLatency\":94.218,\"aws:runtimeOverhead\":19.553,\"aws:responseDuration\":0.066},\"origin\":\"AWS::Lambda::Function\",\"subsegments\":[{\"id\":\"b5ee1a72a923fdbd\",\"name\":\"Overhead\",\"start_time\":1.7445438330140002E9,\"end_time\":1.7445438330335531E9},{\"id\":\"b8a5527d9d36f516\",\"name\":\"Init\",\"start_time\":1.744543832618108E9,\"end_time\":1.744543832916095E9}]}"
+                },
+                {
+                    "Id": "674330bff8f7eb5c",
+                    "Document": "{\"id\":\"674330bff8f7eb5c\",\"name\":\"test-NodejsFunction-0NVcp9yklNs0\",\"start_time\":1.744543832341E9,\"trace_id\":\"1-67fba058-382556474a1e06091dc448de\",\"end_time\":1.744543832355E9,\"http\":{\"response\":{\"status\":202}},\"aws\":{\"request_id\":\"a3d3e242-925a-428a-8b28-2d447a137447\"},\"origin\":\"AWS::Lambda\",\"resource_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-NodejsFunction-0NVcp9yklNs0\",\"subsegments\":[{\"id\":\"6d6a27547b0b3602\",\"name\":\"Attempt #1\",\"start_time\":1.744543832429E9,\"end_time\":1.744543833015E9,\"http\":{\"response\":{\"status\":200}}},{\"id\":\"23f089a170c061c0\",\"name\":\"Dwell Time\",\"start_time\":1.744543832341E9,\"end_time\":1.744543832429E9}]}"
+                }
+            ]
+        },
+        {
+            "Id": "1-67fb9cef-572945e727b1095650917356",
+            "Duration": 0.422,
+            "LimitExceeded": false,
+            "Segments": [
+                {
+                    "Id": "5af7625f65d8f595",
+                    "Document": "{\"id\":\"5af7625f65d8f595\",\"name\":\"test-GoFunction-pX6OFxV2ipUP\",\"start_time\":1.7445429596711473E9,\"trace_id\":\"1-67fb9cef-572945e727b1095650917356\",\"end_time\":1.7445429596863692E9,\"parent_id\":\"51e062b96f61644a\",\"aws\":{\"account_id\":\"585008049375\",\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\",\"cloudwatch_logs\":[{\"log_group\":\"/aws/lambda/test-GoFunction-pX6OFxV2ipUP\"}],\"resource_names\":[\"test-GoFunction-pX6OFxV2ipUP\"]},\"origin\":\"AWS::Lambda::Function\",\"subsegments\":[{\"id\":\"45166de42dd4463f\",\"name\":\"Invocation\",\"start_time\":1.7445429596715314E9,\"end_time\":1.744542959685354E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}},{\"id\":\"8aab7e3aa3683fd0\",\"name\":\"Initialization\",\"start_time\":1.7445429596118248E9,\"end_time\":1.7445429596695466E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}},{\"id\":\"014e078c721913f6\",\"name\":\"Overhead\",\"start_time\":1.7445429596861262E9,\"end_time\":1.7445429596861813E9,\"aws\":{\"function_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\"}}]}"
+                },
+                {
+                    "Id": "483827228e0a77c6",
+                    "Document": "{\"id\":\"483827228e0a77c6\",\"name\":\"test-GoFunction-pX6OFxV2ipUP\",\"start_time\":1.744542959264E9,\"trace_id\":\"1-67fb9cef-572945e727b1095650917356\",\"end_time\":1.74454295927E9,\"http\":{\"response\":{\"status\":202}},\"aws\":{\"request_id\":\"c37d1760-588c-4e3c-9e9a-29ed27c66e1f\"},\"origin\":\"AWS::Lambda\",\"resource_arn\":\"arn:aws:lambda:eu-north-1:585008049375:function:test-GoFunction-pX6OFxV2ipUP\",\"subsegments\":[{\"id\":\"51e062b96f61644a\",\"name\":\"Attempt #1\",\"start_time\":1.744542959375E9,\"end_time\":1.744542959674E9,\"http\":{\"response\":{\"status\":200}}},{\"id\":\"16ae8566d6eaa913\",\"name\":\"Dwell Time\",\"start_time\":1.744542959265E9,\"end_time\":1.744542959375E9}]}"
+                }
+            ]
+        }
+    ],
+    "UnprocessedTraceIds": []
+}
