@@ -1,44 +1,75 @@
-# AWS Lambda X-Ray Analysis Toolkit
+# 🚀 AWS Lambda Cold Start Comparison: Go vs Python vs Node.js
 
-Analyze AWS Lambda performance (Python/Node.js/Go) using X-Ray traces while keeping production deployments clean.
+> “Same API Gateway. Same test interval. Same project. Just three runtimes walking into the cold...”
 
-## Features
+This project compares AWS Lambda **cold start performance** and **developer experience** across three runtimes: **Go**, **Python**, and **Node.js**.
 
-- 📊 Cold start comparisons
-- ⏱ Duration distribution analysis
-- 🕒 Time-based invocation patterns
+---
 
-## Setup
+## 🔍 Why Use AWS X-Ray?
+
+AWS X-Ray is a powerful tool for visualizing and analyzing serverless performance:
+
+- ✅ End-to-end latency tracking
+- ✅ Cold start vs execution time breakdown
+- ✅ Visual request flow mapping
+
+**Complementary Tools:**
+
+- **CloudWatch Logs**: Raw logs
+- **X-Ray**: Performance trace visualization
+
+---
+
+## 🧪 Experimental Setup
+
+### Identical Conditions
+
+All Lambda functions use:
+
+- Same API Gateway endpoint
+- Same return response: `{"message": "..."}`
+- ARM64 architecture
+- X-Ray enabled
+- Triggered via EventBridge at 15-minute intervals
+- 123 traces collected over 10 hours
+
+### Deployment Method
 
 ```bash
-# Clone repo
-git clone https://github.com/yourusername/code-start-testing.git
-cd code-start-testing/analysis
+rm -rf .aws-sam
+sam build && sam deploy --s3-bucket <fresh-bucket>
 
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate  # Linux/macOS
-pip install -r requirements.txt  # pandas, matplotlib, seaborn
+cold-start-testing/
+├── go/                # Go 1.24 (ARM64)
+│   ├── main.go
+│   ├── go.mod
+│   ├── go.sum
+│   └── Makefile
+├── python/            # Python 3.12
+│   ├── app.py
+│   └── requirements.txt
+├── nodejs/            # Node.js 20.x
+│   ├── app.js
+│   └── package.json
+└── template.yaml      # SAM configuration
+
+Visual Breakdown
+
+|-------------------- Total Duration: 1000ms ---------------------|
+|         Cold Start (Init: 552.28ms)        | Execution (447.72ms) |
+|               55.228%                      |      44.772%          |
+
+
+Runtime | Cold Start Rate | Notes
+Node.js | 100%            | High churn, suspected early recycling
+Go      | 65%             | ~35% warm starts, better container reuse
+Python  | Negligible      | 0.5% overhead for long-running functions
+
+
+
+Runtime | Execution Duration (ms) | Cold Start Overhead (%)
+Go      | ~250ms                  | ~40%
+Node.js | ~500ms                  | ~55%
+Python  | ~3min+                  | <1% (negligible)
 ```
-
-## Usage
-
-```bash
-./run_analysis.sh  # Generates CSV + plots in analysis/plots/
-```
-
-## Project Structure
-
-```
-.
-├── src/                  # Production Lambdas (Python/Node.js/Go)
-├── analysis/             # Local analysis tools
-│   ├── venv/            # Python virtual env
-│   ├── parse_xray_traces.py # Main script
-│   └── run_analysis.sh  # Execution wrapper
-└── xray_logs/           # X-Ray trace data
-```
-
-## Sample Output
-
-![Cold Start Rates](plots/cold_start_rates.png)
