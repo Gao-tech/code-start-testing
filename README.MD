@@ -73,3 +73,6 @@ Go      | ~250ms                  | ~40%
 Node.js | ~500ms                  | ~55%
 Python  | ~3min+                  | <1% (negligible)
 ```
+
+Linkedin Artikel:
+https://www.linkedin.com/pulse/aws-lambda-cold-start-comparison-go-vs-python-nodejs-jie-gao-jessi--yef4f
